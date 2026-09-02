@@ -450,12 +450,12 @@ sploh niso dostopni. Drugič, tudi kadar odvode lahko izračunamo, se pri
 \emph{multimodalnih} problemih z mnogimi lokalnimi minimumi deterministični
 postopki pogosto ujamejo v lokalni minimum in ne najdejo globalnega. 
 
-Te omejitve so motivirale razvoj naključnih algoritmov, med katere spadajo tudi metahevristike. \emph{Metahevristika} je splošna optimizacijska metoda, ki z uporabo naključnosti in hevrističnih pravil išče kakovostne približne rešitve zahtevnih optimizacijskih problemov. Večina metahevristik je navdihnjena z naravnimi procesi ali vedenjem organizmov, pri iskanju rešitev pa združuje fazi raziskovanja iskalnega prostora (angl.\ exploration) in izkoriščanja že obetavnih rešitev (angl.\ exploitation).
-Algoritmi na katere se bomo osredotočali v nadaljevanju temeljijo na populaciji rešitev, vredno je pa omeniti da pod metahevristike spadajo tudi algoritmi, ki na vsakem koraku uporabljajo le eno rešitev, na primer simulirano ohlajanje. So pa taki algoritmi manj priljubljeni, saj je kakovost njihove rešitve močno odvisna od izbire začetne rešitve, poleg tega imajo pa tudi problem z uravnavanjem raziskovanja in izkoriščanja. Pri algoritmih, ki temeljijo na populaciji rešitev se tem problemom učinkovito izognemo, saj agenti med sabo izmenjujejo informacije in se z njihovo uporabo premikajo proti bolj obetavnim delom pokrajine, ki jo raziskujejo. 
-Takšen pristop posnema vedenje skupinskih plenilcev v naravi, katerih sodelovanje povečuje učinkovitost lova, kar predstavlja eno izmed temeljnih idej populacijskih metahevristik. Populacijske metahevristike se lahko nadalje delijo v več podskupin glede na vir navdiha. Med najpomembnejše sodijo evolucijski algoritmi, algoritmi, navdihnjeni z vedenjem rojev, algoritmi, navdihnjeni s fizikalnimi pojavi, algoritmi, navdihnjeni s človeškim vedenjem, ter algoritmi, navdihnjeni z matematičnimi koncepti. Poleg teh obstajajo tudi druge skupine, kot so algoritmi, navdihnjeni z glasbo, sistemi in drugimi naravnimi ali umetnimi procesi.
+Te omejitve so motivirale razvoj naključnih algoritmov, med katere spadajo tudi metahevristike. \emph{Metahevristika} je splošna optimizacijska metoda, ki z uporabo naključnosti in hevrističnih pravil išče kakovostne približne rešitve zahtevnih optimizacijskih problemov. Večina metahevristik je na\-vdih\-nje\-na z naravnimi procesi ali vedenjem organizmov, pri iskanju rešitev pa združuje fazi raziskovanja iskalnega prostora (angl.\ exploration) in izkoriščanja že obetavnih rešitev (angl.\ exploitation).
+Algoritmi, na katere se bomo osredotočali v nadaljevanju, temeljijo na populaciji rešitev, vredno je pa omeniti, da pod metahevristike spadajo tudi algoritmi, ki na vsakem koraku uporabljajo le eno rešitev, na primer simulirano ohlajanje. So pa taki algoritmi manj priljubljeni, saj je kakovost njihove rešitve močno odvisna od izbire začetne rešitve, poleg tega imajo pa tudi problem z uravnavanjem raziskovanja in izkoriščanja. Pri algoritmih, ki temeljijo na populaciji rešitev, se tem problemom učinkovito izognemo, saj agenti med sabo izmenjujejo informacije in se z njihovo uporabo premikajo proti bolj obetavnim delom pokrajine, ki jo raziskujejo. 
+Takšen pristop posnema vedenje skupinskih plenilcev v naravi, katerih sodelovanje povečuje učinkovitost lova, kar predstavlja eno izmed temeljnih idej populacijskih metahevristik. Populacijske metahevristike se lahko nadalje delijo v več podskupin glede na vir navdiha. Med najpomembnejše sodijo evolucijski algoritmi, algoritmi, navdihnjeni z vedenjem rojev, algoritmi, navdihnjeni s fizikalnimi pojavi, algoritmi, na\-vdih\-nje\-ni s človeškim vedenjem, ter algoritmi, navdihnjeni z matematičnimi koncepti. Poleg teh obstajajo tudi druge skupine, kot so algoritmi, navdihnjeni z glasbo, sistemi in drugimi naravnimi ali umetnimi procesi.
 
 \begin{izrek}[Izrek o neobstoju brezplačnega kosila]
-    Izrek o neobstoju brezplačnega kosila (angl.\ No Free Lunch theorem)~\cite{585893}
+    Izrek (angl.\ No Free Lunch theorem)~\cite{585893}
     pravi, da je povprečna uspešnost katerega koli optimizacijskega algoritma,
     povprečena čez vse možne kriterijske funkcije, enaka za vse algoritme.
     Noben algoritem torej ni univerzalno najboljši. Če je določen algoritem
@@ -478,10 +478,10 @@ se algoritmi med iskanjem \emph{vedejo}.
 \section{Primerjalni nabor BBOB}
 \label{sec:bbob}
 
-Za primerjavo optimizacijskih algoritmov je potreben nabor raznolikih testnih
+Za primerjavo optimizacijskih algoritmov je potreben nabor raznolikih test\-nih
 funkcij, ki pokrivajo različne tipe optimizacijskih problemov. Zgolj ena ali
-nekaj funkcij ne zadošča, saj je vedenje algoritma močno odvisno od lastnosti
-obravnavanega problema. Standardizirani primerjalni nabori (angl.\ \emph{benchmark
+nekaj funkcij ne zadošča, saj je vedenje algoritma močno odvisno od last\-no\-sti
+obravnavanega problema. Standardizirani primerjalni nabori (angl.\ \emph{bench\-mark
 suites}) zato ponujajo množico funkcij z znanimi in nadzorovanimi lastnostmi,
 kar omogoča ponovljivo in sistematično vrednotenje.
 
@@ -493,7 +493,7 @@ običajni rabi BBOB služi \emph{merjenju uspešnosti} algoritmov, torej temu,
 kako blizu optimuma se posamezni algoritem prebije. V pričujočem delu pa nabor
 uporabljamo drugače, in sicer kot zbirko raznolikih iskalnih krajin z znanimi
 lastnostmi, na katerih opazujemo in primerjamo \emph{vedenje} algoritmov med
-iskanjem. Raznolikost funkcij nam omogoča preveriti, ali predlagane mere
+iska\-njem. Raznolikost funkcij nam omogoča preveriti, ali predlagane mere
 zaznajo vedenjske razlike v različnih razmerah, od preprostih do zahtevnih
 krajin.
 
@@ -515,7 +515,7 @@ optimuma.} in prisotnost več lokalnih minimumov~\cite{bbob2019}:
 
     \item \textbf{Unimodalne funkcije z visoko pogojenostjo}
     ($f_{10}$--$f_{14}$): funkcije z enim samim minimumom, a močno raztegnjeno
-    krajino, kjer je občutljivost v eni smeri lahko za več velikostnih redov
+    krajino, kjer je ob\-čut\-lji\-vost v eni smeri lahko za več velikostnih redov
     večja kot v drugi.
 
     \item \textbf{Multimodalne funkcije z ustrezno globalno strukturo}
@@ -524,12 +524,12 @@ optimuma.} in prisotnost več lokalnih minimumov~\cite{bbob2019}:
     proti globalnemu minimumu. 
 
     \item \textbf{Multimodalne funkcije s šibko globalno strukturo}
-    ($f_{20}$--$f_{24}$): funkcije z mnogimi lokalnimi minimumi in šibko ali
+    ($f_{20}$--$f_{24}$):\\ funkcije z mnogimi lokalnimi minimumi in šibko ali
     zavajajočo globalno strukturo, ki iskanju ne nudi jasne usmeritve proti
     globalnemu minimumu. To so najzahtevnejši problemi v naboru.
 \end{itemize}
 
-Zadnji dve skupini veljata za najbolj reprezentativni za probleme iz resničnega
+Zadnji dve skupini veljata za najbolj reprezentativni za probleme iz res\-nič\-ne\-ga
 sveta, saj imata najbolj zapleteno krajino z izrazito nelinearnostjo in mnogimi
 vrhovi~\cite{bbob2019}. V analizi vedenja algoritme obravnavamo tudi po teh
 skupinah, saj pričakujemo, da se vedenjske razlike najbolj izrazijo prav na
@@ -554,7 +554,7 @@ Za lažjo predstavo o težavnosti posameznih funkcij si oglejmo njihove krajine.
 Ker je kriterijska funkcija definirana nad $\mathbb{R}^n$, jo lahko neposredno
 vizualiziramo le za $n = 2$, kjer vrednost $f(x_1, x_2)$ prikažemo kot ploskev
 v prostoru ali kot toplotno karto v ravnini. Okolje COCO za vsako funkcijo
-ponuja tovrstne vizualizacije\footnote{Dostopne na
+ponuja tovrstne vizualizacije\footnote{Dostopne so na
 \url{https://coco-platform.org/testsuites/bbob/viz.html}.}.
 Slika~\ref{fig:krajine} prikazuje dve funkciji, ki predstavljata nasprotna
 konca razpona težavnosti, in sicer funkcijo sfere ($f_1$) kot preprost unimodalen
@@ -562,7 +562,7 @@ problem in Gallagherjevo funkcijo s 101 vrhom ($f_{21}$) kot močno multimodalen
 problem s šibko globalno strukturo.
 
 Za vsako funkcijo si oglejmo dva pogleda. Levi je \emph{ploskovni prikaz}, ki
-vrednost funkcije predstavi kot tridimenzionalno površino nad ravnino iskalnega
+vred\-nost funkcije predstavi kot tridimenzionalno površino nad ravnino iskalnega
 prostora. Desni je \emph{toplotna karta normaliziranih rangov}, kjer barvo
 določa rang\footnote{Rang nam pove, na katerem mestu je vrednost funkcije po velikosti med vsemi točkami mreže; dodatno je normaliziran na interval [0,1].} vrednosti funkcije in ne njena absolutna vrednost. Slednji prikaz
 je pomemben, ker vrednosti funkcij BBOB obsegajo več velikostnih redov. Če bi
@@ -629,11 +629,11 @@ Mere, ki jih predstavimo v naslednjem poglavju, ne delujejo neposredno na surovi
 
 Preden se posvetimo posameznim korakom, si oglejmo postopek kot celoto.
 Slika~\ref{fig:pipeline} prikazuje pot od izvajanja optimizacijskih
-algoritmov do predstavitve, na kateri temeljijo mere podobnosti iz
+algoritmov do pred\-sta\-vit\-ve, na kateri temeljijo mere podobnosti iz
 poglavja~\ref{ch:metrike}. Vsakemu od korakov je posvečen eden od razdelkov
 tega poglavja.
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering
 \resizebox{\textwidth}{!}{%
 \begin{tikzpicture}[
@@ -671,8 +671,9 @@ poglavju~\ref{ch:metrike}.}
 
 
 Programska koda celotnega cevovoda, od zagona algoritmov prek zajema
-trajektorij in gručenja do izračuna mer podobnosti, je javno dostopna na
-naslovu \url{https://github.com/8Timon24/Diploma-Analiza-in-vizualizacija-algoritmov-za-optimizacijo}.
+trajektorij in gručenja do izračuna mer podobnosti, je javno dostopna%
+\footnote{ \url{https://github.com/8Timon24/Diploma-Analiza-in-vizualizacija-algoritmov-za-optimizacijo}
+}.
 Repozitorij vsebuje tudi datoteko \texttt{requirements.txt} z različicami
 vseh uporabljenih knjižnic. Ker so naključna semena optimizacijskih
 algoritmov fiksirana (razdelek~\ref{subsec:parametri}), so zagoni ponovljivi.
@@ -716,7 +717,7 @@ primerjalnega nabora BBOB, predstavljenega v razdelku~\ref{sec:bbob}.
 Knjižnica \emph{mealpy}~\cite{van2023mealpy} (uporabljena različica 3.0.3)
 vsebuje implementacije 233 metahevrističnih algoritmov, razvrščenih v
 skupine glede na vir navdiha (evolucijski, rojni, fizikalni idr.), kot smo jih
-opisali v razdelku~\ref{sec:opt_meta}. Iz tega nabora jih izberemo 28 iz različnih družin. Do te številke smo prišli s postopnim dodajanjem novih algoritmov, ko smo hoteli primerjati nekatere lastnosti in vedenje algoritmov. Večje število ne bi bilo smiselno, saj je večina vizualizacij narejena za primerjavo relativno majhnega števila algoritmov, tako da izmed teh 28 vzamemo še reprezentativno podmnožico, ki jo podrobneje analiziramo. 
+opisali v razdelku~\ref{sec:opt_meta}. Iz tega nabora jih izberemo 28 iz različnih družin. Do te številke smo prišli s postopnim dodajanjem novih algoritmov, ko smo hoteli primerjati nekatere lastnosti in vedenje algoritmov. Večje število ne bi bilo smiselno, saj je večina vi\-zu\-ali\-za\-cij narejena za primerjavo relativno majhnega števila algoritmov, tako da izmed teh 28 vzamemo še reprezentativno podmnožico, ki jo podrobneje analiziramo. 
 
 Izbrani nabor pokriva šest od skupin, opisanih v razdelku~\ref{sec:opt_meta}:
 šestnajst rojnih algoritmov, šest evolucijskih, tri sistemske ter po enega
@@ -727,7 +728,7 @@ pojavljajo v knjižnici mealpy, saj v tej obliki nastopajo tudi v legendah
 slik v poglavju~\ref{ch:rezultati}. Polna imena puščamo v angleščini, ker so
 metode pod njimi uveljavljene v literaturi.
 
-\begin{table}[H]
+\begin{table}[p]
 \centering
 \small
 \setlength{\tabcolsep}{5pt}
@@ -797,7 +798,7 @@ kjer je $n$ dimenzija iskalnega prostora.
 \label{sec:trajektorije}
 
 Za vsako kombinacijo algoritma, funkcije, instance, dimenzije in naključnega
-semena poženemo zagon optimizacijskega algoritma s pomočjo knjižnice mealpy in
+semena poženemo zagon optimizacijskega algoritma s pomočjo knjižnice meal\-py in
 med njegovim potekom zajamemo tri vrste podatkov: \emph{populacijsko
 trajektorijo}, \emph{trajektorijo najboljše rešitve} in \emph{mero
 raznolikosti populacije}.
@@ -808,7 +809,7 @@ Za razliko od pristopov, ki beležijo le najboljšo najdeno rešitev, v tem delu
 shranimo \emph{celotno populacijo} skozi vse iteracije zagona, saj mere
 podobnosti temeljijo na tem, kako se populacija kot celota giblje po iskalnem
 prostoru. Knjižnica mealpy med reševanjem v atributu
-\texttt{model.history.list\_population} beleži pozicije vseh agentov v vsaki
+\texttt{model.history.list\_po\-pu\-la\-tion} beleži pozicije vseh agentov v vsaki
 iteraciji. Za vsakega agenta v vsaki iteraciji shranimo njegov položaj
 $x \in \mathbb{R}^n$, vrednost kriterijske funkcije $f(x)$, zaporedno številko
 iteracije ter kumulativno število dotedanjih vrednotenj kriterijske funkcije.
@@ -849,7 +850,7 @@ najboljšo rešitev vsakega zagona.
 \label{sec:grucenje}
 
 Populacijska trajektorija, kot jo zajamemo v razdelku~\ref{sec:trajektorije},
-je zaporedje položajev velikega števila agentov skozi mnogo iteracij, kar samo
+je zaporedje po\-lo\-ža\-jev velikega števila agentov skozi mnogo iteracij, kar samo
 po sebi ni primerno za neposredno primerjavo med algoritmi. Zato trajektorije
 najprej pretvorimo v jedrnatejšo predstavitev. Za vsak \emph{problem} (v tem in naslednjih poglavjih s tem izrazom vedno mislimo na eno samo,
 fiksno kombinacijo funkcije \emph{in} instance, ne le funkcije) položaje
@@ -863,7 +864,7 @@ Pred gručenjem podatke za posamezen problem filtriramo. Obdržimo le
 algoritme iz obravnavanega nabora, odstranimo pa vrstice, ki ustrezajo
 začetni (ničti) iteraciji, saj ta predstavlja naključno inicializacijo
 populacije pred začetkom iskanja in ne dejanskega iskalnega vedenja.
-Koordinate in vrednosti kriterijske funkcije nato skaliramo\footnote{Uporabimo min-max skaliranje}, da so med seboj primerljive ne glede na obseg
+Koordinate in vrednosti kriterijske funkcije nato skaliramo\footnote{Uporabimo min-max skaliranje.}, da so med seboj primerljive ne glede na obseg
 posamezne razsežnosti oziroma funkcije.
 
 \subsection{Algoritem KMeans}
@@ -900,7 +901,7 @@ nekonveksnih oblik, ki bi jih lahko proizvedle druge metode gručenja.
 \emph{metodo komolca} (angl.\ elbow method). Ker se WCSS z večanjem $k$
 vedno zmanjšuje (v skrajnem primeru $k=N$ je WCSS enaka 0), izbira zgolj
 najmanjše WCSS ni smiselna. Namesto tega WCSS izrišemo kot funkcijo $k$ in
-poiščemo točko, pri kateri se hitrost upadanja bistveno upočasni, t.\,i.\
+poiščemo točko, pri kateri se hitrost upadanja bistveno upočasni -- t.\,i.\
 \sn{komolec} krivulje. Do te točke dodajanje gruč še pomembno izboljša
 prileganje, po njej pa prinaša le majhne dodatne izboljšave za ceno večje
 kompleksnosti.
@@ -915,6 +916,8 @@ knjižnice \emph{Yellowbrick}~\cite{bengfort2019yellowbrick}. Ta komolec
 poišče z algoritmom zaznavanja kolena \emph{Kneedle}~\cite{satopaa2011kneedle},
 ki za koleno vzame točko največje ukrivljenosti krivulje, torej tisto vrednost $k$, pri kateri se upadanje WCSS najizraziteje upočasni.
 
+\clearpage
+
 \subsection{Gručenje in porazdelitev zasedenosti}
 
 Nad skaliranimi koordinatami agentov poženemo KMeans z izbranim številom
@@ -924,15 +927,15 @@ danem problemu, so oznake gruč med algoritmi neposredno primerljive. Ista
 oznaka gruče pri dveh različnih algoritmih ustreza isti regiji iskalnega
 prostora. Ta lastnost je ključna za smiselnost mer podobnosti, ki
 porazdelitve zasedenosti med algoritmi neposredno primerjajo.
-Za vsako kombinacijo algoritma, zagona in iteracije nato preštejemo koliko
+Za vsako kombinacijo algoritma, zagona in iteracije nato preštejemo, koliko
 agentov je pripadalo posamezni gruči, kar da tabelo porazdelitve zasedenosti gruč skozi čas, osrednjo predstavitev, na kateri temeljijo mere podobnosti
 v poglavju~\ref{ch:metrike}.
 Za vsak problem shranimo tri datoteke: koordinate centrov gruč, celoten
 označen nabor podatkov (položaji agentov skupaj s pripadajočo oznako gruče)
 ter tabelo porazdelitve zasedenosti gruč, ki je vhod za nadaljnjo analizo.
-Eden izmed možnih načinov vizualizacije trajektorije potem izhaja direktno iz gručenja. V vsaki iteraciji se 50 agentov porazporedi v $k$ gruč (odvisno od problema), kar nam v kombinaciji z uporabo \emph{heatmapa}\footnote{Vizualizacija je iz knjižnice Seaborn} da spodnjo sliko ~\ref{fig:zasedenost-primer}.
+Eden izmed možnih načinov vizualizacije trajektorije potem izhaja direktno iz gručenja. V vsaki iteraciji se 50 agentov porazporedi v $k$ gruč (odvisno od problema), kar nam v kombinaciji z uporabo toplotne karte\footnote{Vizualizacija je iz knjižnice Seaborn.} da spodnjo sliko~\ref{fig:zasedenost-primer}.
 
-\begin{figure}[H]
+\begin{figure}[p]
 \centering
 \includegraphics[width=0.85\textwidth]{Slike/Diploma_slike/clustering_latest_F23_I1_OriginalDE+OriginalALO_run_1_dim_2.pdf}
 \caption{Porazdelitev zasedenosti gruč skozi iteracije za algoritma \emph{OriginalDE} in \emph{OriginalALO} na problemu $\prob{23}{1}$ (dimenzija 2, zagon 1).}
@@ -940,7 +943,7 @@ Eden izmed možnih načinov vizualizacije trajektorije potem izhaja direktno iz 
 \end{figure}
 
 Na sliki je razvidno, da na enem izmed težjih problemov algoritem \emph{OriginalDE} v 20 iteracijah
-ni zmožen konvergirati, ne proti lokalnemu, ne proti globalnemu minimumu. Skozi vse iteracije je populacija zelo razkropljena in ni ene gruče v katero bi se algoritem bolj nagibal. 3 gruče so bolj \sn{obetavne}, ampak nobena ne prevlada. Na drugi strani se \emph{OriginalALO} začne nagibati h gruči 9 že zgodaj v zagonu, v 4. iteraciji že prevlada, čeprav še vedno poskuša malo raziskovati. V 14. iteraciji je pa že celotna njegova populacija v gruči z oznako 9. Pomembno je pa se zavedati, da to še ne pomeni da je \emph{OriginalALO} našel boljšo rešitev, ker je možno da se je ujel v lokalnem minimumu.
+ni zmožen konvergirati, ne proti lokalnemu, ne proti globalnemu minimumu. Skozi vse iteracije je populacija zelo razkropljena in ni ene gruče, v katero bi se algoritem bolj nagibal. Tri gruče so bolj \sn{obetavne}, ampak nobena ne prevlada. Na drugi strani se \emph{OriginalALO} začne nagibati h gruči 9 že zgodaj v zagonu, v 4.~iteraciji že prevlada, čeprav še vedno poskuša malo raziskovati. V 14.~iteraciji je pa že celotna njegova populacija v gruči z oznako 9. Pomembno je pa se zavedati, da to še ne pomeni, da je \emph{OriginalALO} našel boljšo rešitev, ker je možno, da se je ujel v lokalnem minimumu.
 
 
 \chapter{Mere podobnosti}
@@ -978,7 +981,7 @@ v končni lokaciji in razlika v končnem fitnessu) je prispevek tega dela.
 Razmejitev skupaj z ostalimi lastnostmi mer povzema
 tabela~\ref{tab:pregled-mer} na koncu poglavja.
 
-Cilj tega poglavja ni izpostaviti eno samo, \sn{pravo} mero podobnosti,
+Cilj tega poglavja ni izpostaviti ene same \sn{prave} mere podobnosti,
 temveč ponuditi nabor komplementarnih mer, od katerih vsaka zajame
 drugačen vidik iskalnega vedenja algoritmov. Nekatere temeljijo na
 porazdelitvi populacije po gručah, druge na razmerju med raziskovanjem in
@@ -998,7 +1001,7 @@ algoritmih, ne glede na to, katere gruče so pri tem zasedene.
 
 \subsection{Formalna definicija}
 
-Za dan algoritem in zagon na iteraciji $t$ naj $m_1, \dots, m_k$ označujejo
+Za dani algoritem in zagon na iteraciji $t$ naj $m_1, \dots, m_k$ označujejo
 število agentov v vsaki od $k$ gruč tega problema, $M = \sum_{i=1}^k m_i$ pa
 skupno število agentov.\footnote{Za zasedenosti gruč namenoma uporabljamo
 simbol $m$ in ne $n$, ki je v tem delu rezerviran za dimenzijo iskalnega
@@ -1015,7 +1018,7 @@ z njeno največjo možno vrednostjo. Ta je enaka $\ln k$, kar pokažemo v
 Trditvi~\ref{trd:entropija-max}. Pri njenem dokazu potrebujemo Jensenovo
 neenakost, ki jo zato navedemo najprej.
 
-\begin{lema}[Jensenova neenakost, končna oblika]
+\begin{lema}[Jensenova neenakost -- končna oblika]
 \label{lema:Jensen}
 Naj bo $f$ konkavna funkcija na intervalu $I \subseteq \mathbb{R}$, naj bodo
 $x_1, \dots, x_n \in I$ in naj bodo $\lambda_1, \dots, \lambda_n \ge 0$ taki,
@@ -1047,7 +1050,7 @@ z enakostjo natanko tedaj, ko je $p_i = 1/k$ za vsak $i$.
 \begin{dokaz}
 Funkcija $f(x) = -x \ln x$ je na $(0, \infty)$ strogo konkavna, saj je
 $f''(x) = -1/x < 0$. Z dogovorom $f(0) = 0$ je zvezna in strogo konkavna na
-celotnem $[0, \infty)$, zato spodnji sklep velja tudi tedaj, ko je kateri od
+celotnem intervalu $[0, \infty)$, zato spodnji sklep velja tudi tedaj, ko je kateri od
 $p_i$ enak 0. Po Jensenovi neenakosti (Lema~\ref{lema:Jensen}) za konkavne funkcije, uporabljeni
 z enakimi utežmi $1/k$, velja
 \[
@@ -1090,7 +1093,7 @@ Mera $d_H$ zavzema vrednosti v $[0, 1]$, saj sta $\hat{H}_A(t)$ in
 $\hat{H}_B(t)$ za vsak $t$ v $[0,1]$. Vrednost 0 pomeni, da sta algoritma na
 vsaki iteraciji ohranjala enako diverziteto populacije po gručah, vrednost bliže
 1 pa, da se je njuna širina raziskovanja skozi čas bistveno razlikovala.
-Kar mera ne zajame, pa je, kje v iskalnem prostoru je algoritem razporejal
+Česar mera ne zajame, pa je to, kje v iskalnem prostoru je algoritem razporejal
 agente. Dva algoritma imata lahko popolnoma enako entropijsko krivuljo, 
 medtem ko sta v resnici zasedala povsem različne gruče. 
 To razliko naslavljajo mere, predstavljene v naslednjih razdelkih.
@@ -1107,7 +1110,7 @@ predstavljenega v razdelku~\ref{sec:sorodna}.
 
 \subsection{Formalna definicija}
 
-Za dan algoritem in zagon naj $m_{t,i}$ označuje število agentov v $i$-ti
+Za dani algoritem in zagon naj $m_{t,i}$ označuje število agentov v $i$-ti
 gruči na iteraciji $t$, za $t = 1, \dots, T$ in $i = 1, \dots, k$. Tabelo
 zasedenosti sploščimo v en sam vektor
 \[
@@ -1126,19 +1129,19 @@ Kosinusna razdalja med njima je:
 \subsection{Pomen mere}
 
 Ker vektorja $v_A, v_B$ vsebujeta le nenegativne vrednosti (števila
-agentov), je njun kosinus vedno v $[0,1]$, zato je $d_{\cos} \in [0,1]$.
+agentov), je njun kosinus vedno v intervalu $[0,1]$, zato je $d_{\cos} \in [0,1]$.
 Vrednost 0 pomeni, da sta algoritma zasedala gruče v enakem sorazmerju ob
-enakih iteracijah. Vrednost bliže 1 pomeni, da nista nikoli hkrati
+enakih iteracijah. Vrednost 1 pomeni, da nista nikoli hkrati
 zasedala istih gruč ob istih iteracijah.
 
-Mera upošteva celoten vzorec zasedenosti, ne le njegovo širino ali samo množico obiskanih gruč.
+Mera upošteva celoten vzorec zasedenosti, ne le njegove širine ali samo množice obiskanih gruč.
 Ima pa dve pomembni omejitvi. Prvič, ker primerja $t$-to iteracijo
 algoritma $A$ neposredno s $t$-to iteracijo algoritma $B$, je \emph{časovno
 toga}. Če bi algoritem $B$ sledil povsem enakemu vzorcu kot $A$, a z
 zamikom nekaj iteracij, bi mera to zaznala kot veliko razliko, čeprav bi
 šlo za skoraj enako vedenje. Drugič, kosinusna podobnost je
 neobčutljiva na \emph{magnitudo}. Vektorja, ki kažeta v isto smer, a se
-razlikujeta po velikosti komponent (npr. ena gruča z enim agentom v
+razlikujeta po velikosti komponent (npr.~ena gruča z enim agentom v
 primerjavi z gručo, ki jih ima štirideset), dasta enako kosinusno
 podobnost.
 
@@ -1187,8 +1190,8 @@ povprečno kosinusno podobnost med trajektorijami, pridobljenimi z različnimi
 semeni~\cite{clustopt2025}:
 \[
     \mathrm{stability}(a, p) = \frac{1}{|R|(|R|-1)}
-    \sum_{\substack{r_k, r_l \in R \\ r_k \neq r_l}}
-    \mathrm{sim}\bigl(v_{a,p,r_k},\, v_{a,p,r_l}\bigr),
+    \sum_{\substack{r_k, r_\ell \in R \\ r_k \neq r_\ell}}
+    \mathrm{sim}\bigl(v_{a,p,r_k},\, v_{a,p,r_\ell}\bigr),
 \]
 kjer je $\mathrm{sim}(\cdot,\cdot)$ kosinusna podobnost, definirana v
 razdelku~\ref{sec:cosine}.
@@ -1212,7 +1215,7 @@ kot zgoraj~\cite{clustopt2025}:
     \[
     \mathrm{similarity}(a_m, a_n) = \frac{1}{|R||P|}
     \sum_{r \in R} \sum_{p \in P}
-    \mathrm{sim}\bigl(v_{a_m,p,r},\, v_{a_n,p,r}\bigr),
+    \mathrm{sim}\bigl(v_{a_m,p,r},\, v_{a_n,p,r}\bigr).
     \]
 \end{definicija}
 
@@ -1220,6 +1223,8 @@ Zgornji izraz je agregacija kosinusne razdalje $d_{\cos}$ iz
 razdelka~\ref{sec:cosine} čez vsa semena in vse probleme. Ta izračun
 uporabimo za vizualizacijo gručenja algoritmov glede na kosinusno razdaljo,
 ki jo predstavimo v razdelku~\ref{sec:grucenje-metrike}.
+
+\clearpage
 
 \section{Kosinusna razdalja po gručah}
 \label{sec:cosine-columns}
@@ -1233,7 +1238,7 @@ informacija, ki jo globalna različica pri sploščitvi izgubi.
 
 \subsection{Formalna definicija}
 
-Za dan algoritem in zagon naj $a_i = (m_{1,i}, \dots, m_{T,i}) \in
+Za dani algoritem in zagon naj $a_i = (m_{1,i}, \dots, m_{T,i}) \in
 \mathbb{R}^T$ označuje časovno vrsto zasedenosti $i$-te gruče skozi $T$ iteracij, torej zaporedje vrednosti, ki podaja, koliko agentov je gruča 
 $i$ vsebovala na vsaki posamezni iteraciji zagona. Za par algoritmov $A$ in $B$ 
 na istem zagonu naj bosta $a_i$ in $b_i$ pripadajoči časovni vrsti $i$-te gruče. 
@@ -1242,7 +1247,7 @@ Za vsako gručo $i = 1,\dots, k$ definiramo prispevek $s_i$ po pravilu:
     s_i =
     \begin{cases}
         \text{(gruča $i$ se izloči iz povprečja)} & \text{če } a_i = \mathbf{0} \text{ in } b_i = \mathbf{0}, \\[4pt]
-        0 & \text{če natanko eden od } a_i, b_i \text{ je } \mathbf{0}, \\[4pt]
+        0 & \text{če je natanko eden od } a_i, b_i \text{ enak } \mathbf{0}, \\[4pt]
         \dfrac{a_i \cdot b_i}{\lVert a_i \rVert \, \lVert b_i \rVert} & \text{sicer.}
     \end{cases}
 \]
@@ -1265,7 +1270,7 @@ Ker je vsak $s_i \in [0,1]$, velja tudi $d_{\text{col}} \in [0,1]$. Vrednost
 
 Mera naslavlja časovno togost globalne kosinusne razdalje, saj primerjavo
 loči po posameznih regijah. Deli pa njeno omejitev glede magnitude.
-Gruča, kjer je en algoritem poslal enega samega agenta, drugi pa nobenega,
+Gruča, kamor je en algoritem poslal enega samega agenta, drugi pa nobenega,
 prispeva enako (ničelno) vrednost kot gruča, kjer bi en algoritem poslal
 petdeset agentov, drugi pa nobenega, čeprav gre za vsebinsko precej
 različni situaciji. 
@@ -1283,7 +1288,7 @@ populacije.
 
 \subsection{Formalna definicija}
  
-Za dan algoritem in zagon nam knjižnica mealpy za vsako iteracijo $t$ poda
+Za dani algoritem in zagon nam knjižnica mealpy za vsako iteracijo $t$ poda
 delež \emph{raziskovanja} $e(t) \in [0, 100]$, ki odraža razpršenost
 populacije v tisti iteraciji glede na razpršenost, doseženo  kadarkoli med
 zagonom. To vrednost mealpy izračuna interno. Delež
@@ -1304,13 +1309,13 @@ temelječe mere, omejena na $[0,1]$.
  
 \subsection{Pomen mere}
  
-Mera $d_e$ zavzema vrednosti v $[0, 1]$. Vrednost
+Mera $d_e$ zavzema vrednosti v intervalu $[0, 1]$. Vrednost
 0 pomeni, da sta algoritma na vsaki iteraciji ohranjala enako razmerje med
 raziskovanjem in izkoriščanjem, večja vrednost pa pomeni, da se je to
 razmerje med njima skozi zagon bolj razlikovalo. 
 Ker mera izvira iz povsem drugega vira podatkov kot na gručah temelječe
 mere, ne pove ničesar o tem, \emph{katere} regije iskalnega prostora je
-algoritem zasedal temveč meri izključno dinamiko prehajanja med raziskovanjem
+algoritem zasedal, temveč meri izključno dinamiko prehajanja med raziskovanjem
 in izkoriščanjem, ne glede na to, kje v prostoru se je to dogajalo. 
 
 \section{Razlika v končni lokaciji}
@@ -1332,7 +1337,7 @@ končni lokaciji je evklidska razdalja med njima:
 \subsection{Pomen mere}
 
 Mera je smiselna le znotraj iste instance problema, saj je lega optimuma
-odvisna od instance (razdelek~\ref{sec:bbob}). Primerjava lokacij med
+od\-vis\-na od instance (razdelek~\ref{sec:bbob}). Primerjava lokacij med
 različnimi instancami ne bi bila smiselna, ker gre za različno premaknjene in zarotirane funkcije. Prav tako magnituda mere ni neposredno
 primerljiva med dimenzijami, saj z večanjem $n$ narašča tudi razpon možnih
 evklidskih razdalj znotraj iskalnega prostora $[-5,5]^n$.
@@ -1360,6 +1365,8 @@ mera pove, kako različno dobri sta bili končni rešitvi dveh algoritmov
 globalnemu optimumu. Ker je razpon vrednosti kriterijske funkcije med
 različnimi funkcijami nabora BBOB izjemno velik, je mera smiselno
 primerljiva le znotraj istega problema, ne pa med različnimi problemi.
+
+\clearpage
 
 \section{Pregled mer}
 \label{sec:pregled-mer}
@@ -1415,7 +1422,7 @@ neobčutljiv na naključno seme, vrednost blizu 0 pa, da je njegovo vedenje
 močno odvisno od njega. Slika~\ref{fig:stabilnost-dim2-10} prikazuje
 stabilnost, agregirano po razredu problema, za dimenziji 2 in 10.
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
@@ -1436,7 +1443,7 @@ stabilnost, agregirano po razredu problema, za dimenziji 2 in 10.
 \end{figure}
 
 Nižja stabilnost v dimenziji 10 je skladna s pričakovanji glede na
-naraščajočo velikost iskalnega prostora, saj populacija ostaja enako velika (50 agentov), zato ta
+na\-ra\-šča\-jo\-čo velikost iskalnega prostora, saj populacija ostaja enako velika (50 agentov), zato ta
 vsakič pokrije sorazmerno manjši del prostora in je vedenje algoritma bolj
 odvisno od naključne inicializacije. K nižji izmerjeni stabilnosti 
 delno prispeva tudi večje število gruč $k$, ki ga v višjih dimenzijah
@@ -1454,7 +1461,7 @@ vsemi pari mer.
 
 \begin{definicija}[Spearmanov korelacijski koeficient]
 \label{def:spearman}
-Naj bosta $X = (x_1, \dots, x_n)$ in $Y = (y_1, \dots, y_n)$ vzorca $n$
+Naj bosta $X = (x_1,$ $\dots, x_n)$ in $Y = (y_1, \dots, y_n)$ vzorca $n$
 opazovanj po parih, in naj $\mathrm{rang}(x_i)$ oziroma $\mathrm{rang}(y_i)$
 označuje rang $i$-tega opazovanja znotraj vzorca $X$ oziroma $Y$ (najmanjša
 vrednost ima rang 1). Spearmanov korelacijski koeficient je Pearsonov
@@ -1509,7 +1516,7 @@ dimenzije 2, 5 in 10.
 
 
 Iz matrik je razviden dosleden vzorec. Mere, ki izhajajo iz gručenja
-trajektorij (entropija, kosinusna razdalja in kosinusna razdalja po gručah),
+tra\-jek\-to\-rij (entropija, kosinusna razdalja in kosinusna razdalja po gručah),
 med seboj korelirajo zmerno (na primer korelacija med globalno in po
 gručah kosinusno razdaljo znaša $\rho \approx 0{,}5$ v vseh treh dimenzijah), kar je pričakovano, saj izhajajo iz istega vira podatkov, a
 kljub temu niso redundantne. Mere, ki izhajajo iz drugih virov podatkov, so
@@ -1519,7 +1526,7 @@ pri dimenziji 2 ($\rho = 0{,}69$), a ta povezava z dimenzijo hitro upade
 raziskovanju, ki kljub neodvisnemu izvoru izračuna korelira
 zelo močno in z dimenzijo še narašča ($\rho = 0{,}77$ do $0{,}84$). 
 
-\begin{figure}[H]
+\begin{figure}[p]
     \centering
     \begin{subfigure}[b]{\textwidth}
         \centering
@@ -1563,7 +1570,7 @@ dveh algoritmov, druga pa, kako različno kakovostni sta ti rešitvi.
 Vprašanje, ki si ga zastavimo v tem razdelku, je, ali sta ta dva vidika med seboj povezana, in če, kako se ta povezava spreminja z naraščajočo
 dimenzijo iskalnega prostora.
 
-V nizko-dimenzionalnih, pogosto skoraj unimodalnih krajinah je odgovor
+V nizkodimenzionalnih, pogosto skoraj unimodalnih krajinah, je odgovor
 intuitiven. Če obstaja v bistvu en sam privlačni bazen, bližina končne
 lokacije optimumu neposredno določa kakovost dosežene rešitve, zato
 pričakujemo, da se mera razlike v lokaciji in mera razlike v fitnessu
@@ -1594,7 +1601,7 @@ ločeno po dimenziji, skupaj z regresijsko premico.
     korelacija na tem problemu ($\rho = 0{,}94$ pri dimenziji 2,
     $\rho = 0{,}53$ pri dimenziji 5, $\rho = 0{,}34$ pri dimenziji 10) sledi
     istemu padajočemu trendu kot agregatna korelacija čez vse obravnavane
-    probleme, a je na tem posameznem, izrazito multimodalnem problemu še
+    probleme, a je na tem posameznem, izrazito multimodalnem problemu, še
     bolj izrazita.}
     \label{fig:lokacija-fitness-scatter}
 \end{figure}
@@ -1611,7 +1618,7 @@ neodvisno beleži knjižnica mealpy. Kljub temu obe intuitivno merita isto osnov
 
 Če se meri kljub neodvisnima izvoroma ujemata, to ni posledica skupnega
 vira podatkov (ker ga ni), temveč dokaz, da obe dejansko merita to, kar trdita, t.\,i.\ \emph{konvergentna veljavnost}. Spearmanova korelacija
-med tema dvema meroma (glej razdelek~\ref{sec:spearman}) je visoka skozi
+med tema dvema merama (glej razdelek~\ref{sec:spearman}) je visoka skozi
 vse tri dimenzije in z dimenzijo celo rahlo narašča in znaša $\rho = 0{,}77$ pri
 dimenziji 2, $\rho = 0{,}83$ pri dimenziji 5 in $\rho = 0{,}84$ pri
 dimenziji 10. Gre za natanko nasproten vzorec od tistega, ki smo ga opazili
@@ -1634,7 +1641,7 @@ tudi v deležu raziskovanja (slika~\ref{fig:raziskovanje-f23}), in obratno za
 tiste, ki ostanejo razpršeni skozi ves zagon.
 
 
-\begin{figure}[H]
+\begin{figure}[p]
     \centering
     \begin{subfigure}[b]{0.85\textwidth}
         \centering
@@ -1693,21 +1700,7 @@ posplošiti v splošno pravilo, je pa skladno z ugotovitvijo iz
 razdelka~\ref{sec:konvergenca}, da je ohranjanje raziskovanja povezano z
 razpršenostjo populacije skozi celoten zagon.
 
-Možna razlaga tega vzorca je vezana na naravo problema $F_{21}$, ki spada med
-multimodalne funkcije s šibko globalno strukturo (razdelek~\ref{sec:bbob})
-in ima izjemno veliko lokalnih minimumov. Algoritem, ki entropijo zniža
-hitro, se v bistvu zaveže naključnemu izmed teh mnogih bazenov, še preden
-je prostor smiselno raziskal. Kakovost tako dosežene rešitve je zato
-močno odvisna od sreče pri izbiri začetne smeri. Algoritem, ki entropijo
-znižuje postopno, kot to počneta OriginalSHADE in SADE, po drugi strani
-dlje ohranja možnost, da najde ugodnejši bazen, preden se dokončno usmeri vanj, pri dimenziji 10 pa ima za to na voljo bistveno več iteracij kot pri
-dimenziji 2, saj število iteracij v tem delu narašča premo sorazmerno z
-dimenzijo (razdelek~\ref{sec:mc}). Ta razlaga je verjetno v veliki meri
-odvisna od lastnosti konkretnega problema. Pri manj multimodalnih
-funkcijah bi bila prednost postopne konvergence lahko manj izrazita ali
-odsotna.
-
-\begin{figure}[H]
+\begin{figure}[p]
     \centering
     \begin{subfigure}[b]{\textwidth}
         \centering
@@ -1731,6 +1724,20 @@ odsotna.
     entropijo $H_{\text{konec}}$.}
     \label{fig:entropija-fitness-f21}
 \end{figure}
+
+Možna razlaga tega vzorca je vezana na naravo problema $F_{21}$, ki spada med
+multimodalne funkcije s šibko globalno strukturo (razdelek~\ref{sec:bbob})
+in ima izjemno veliko lokalnih minimumov. Algoritem, ki entropijo zniža
+hitro, se v bistvu zaveže naključnemu izmed teh mnogih bazenov, še preden
+je prostor smiselno raziskal. Kakovost tako dosežene rešitve je zato
+močno odvisna od sreče pri izbiri začetne smeri. Algoritem, ki entropijo
+znižuje postopno, kot to počneta OriginalSHADE in SADE, po drugi strani
+dlje ohranja možnost, da najde ugodnejši bazen, preden se dokončno usmeri vanj, pri dimenziji 10 pa ima za to na voljo bistveno več iteracij kot pri
+dimenziji 2, saj število iteracij v tem delu narašča premo sorazmerno z
+dimenzijo (razdelek~\ref{sec:mc}). Ta razlaga je verjetno v veliki meri
+odvisna od lastnosti konkretnega problema. Pri manj multimodalnih
+funkcijah bi bila prednost postopne konvergence lahko manj izrazita ali
+odsotna.
 
 \subsection{Prilagodljivost glede na težavnost problema}
 
@@ -1760,7 +1767,9 @@ proračunu iteracij na tem problemu v bistvu ne zaveže nobeni rešitvi. To se
 sklada z opažanjem iz prejšnjega razdelka, kjer je bil SADE eden od dveh
 algoritmov, ki na $F_{21}$ pri dimenziji 10 nista popolnoma konvergirala proti kateri rešitvi.
 
-\begin{figure}[H]
+\clearpage
+
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{Slike/Diploma_slike/uni_vs_multimodal.pdf}
     \caption{Normalizirana entropija skozi iteracije na ločljivi, unimodalni
@@ -1769,7 +1778,6 @@ algoritmov, ki na $F_{21}$ pri dimenziji 10 nista popolnoma konvergirala proti k
     dimenzijah (vrstice).}
     \label{fig:entropija-uni-multi}
 \end{figure}
-
 
 \section{Gručenje algoritmov po merah}
 \label{sec:grucenje-metrike}
@@ -1786,46 +1794,52 @@ skupinama povprečje razdalj med vsemi pari njunih elementov.
 Slika~\ref{fig:grucenje-entropija} prikazuje gručenje na podlagi
 entropijske krivulje. Dendrogram razkrije tri
 jasno ločene skupine. OriginalSHADE in SADE nikoli zares ne konvergirata,
-saj entropija ostane visoka skozi ves zagon. OriginalALO, AugmentedAEO,
+saj entropija ostane visoka skozi ves zagon. Orig\-i\-nal\-ALO, AugmentedAEO,
 OriginalAEO in OriginalMRFO hitro in popolnoma konvergirajo. OriginalDE,
 GWO\_WOA in OriginalGWO prav tako hitro padejo, a se ustalijo na zmerni,
-ne ničelni ravni. Razlog zakaj se \emph{OriginalDE} obnaša drugače kot \emph{OriginalSHADE} in \emph{SADE}, čeprav so vsi iz DE družine je to, da \emph{OriginalDE} nima nobenega mehanizma prilagajanja entropije populacije, medtem ko druga dva sta oba \sn{self-adapting} verzije, torej se s težavnostjo problema entropija njune populacije spreminja.
-\begin{figure}[H]
+neničelni ravni. Razlog, zakaj se \emph{OriginalDE} obnaša drugače kot \emph{OriginalSHADE} in \emph{SADE}, čeprav so vsi iz družine DE, je to, da \emph{OriginalDE} nima nobenega mehanizma prilagajanja entropije populacije, medtem ko sta druga dva algoritma \sn{self-adapting} različici, torej se s težavnostjo problema entropija njune populacije spreminja.
+
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{Slike/Diploma_slike/entropy_clustermap_dim2.pdf}
     \caption{Gručenje algoritmov na podlagi surove entropijske krivulje
     (matrika algoritem $\times$ iteracija), dimenzija 2.}
     \label{fig:grucenje-entropija}
 \end{figure}
+
 Slika~\ref{fig:grucenje-kosinusna} prikazuje gručenje na podlagi kosinusne
 podobnosti, podedovane iz predhodnega dela (razdelek~\ref{sec:sorodna}). 
 Tu se družina DE (SADE, JADE, OriginalSHADE) jasno združi, z medsebojno podobnostjo $0{,}49$--$0{,}50$, kar je precej več kot njena podobnost do AugmentedAEO ($0{,}17$--$0{,}20$).
-\begin{figure}[H]
+
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.75\textwidth]{Slike/Diploma_slike/algorithm_mean_similarity_clustermap_dim_2_scale_False.pdf}
     \caption{Gručenje algoritmov na podlagi kosinusne podobnosti, dimenzija
     2.}
     \label{fig:grucenje-kosinusna}
 \end{figure}
+
 Slika~\ref{fig:grucenje-raziskovanje} nazadnje prikazuje gručenje na podlagi
 razlike v raziskovanju (razdelek~\ref{sec:exploration}) na problemu
 $\prob{23}{1}$ pri dimenziji 5. Tudi tu se družina DE (SADE, OriginalDE,
 OriginalSHADE) tesno združi (medsebojne razlike $5{,}1$--$8{,}9$), medtem ko
 AugmentedAEO in OriginalALO ostaneta vedenjska osamelca z visokimi razlikami
 do skoraj vseh preostalih algoritmov.
-\begin{figure}[H]
+
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.85\textwidth]{Slike/Diploma_slike/exploration_difference_clustermap_F23_I1_dim5.pdf}
     \caption{Gručenje algoritmov na podlagi razlike v raziskovanju, problem
     $\prob{23}{1}$, dimenzija 5.}
     \label{fig:grucenje-raziskovanje}
 \end{figure}
+
 Družina DE se tako gruči skupaj v vseh treh, med seboj neodvisnih merah.
-Prav tako drži za oba algoritma iz GWO družine (GWO\_WOA in OriginalGWO), ki
+Prav tako to drži za oba algoritma iz družine GWO (GWO\_WOA in Orig\-i\-nalGWO), ki
 se prav tako dosledno združita v vseh treh. Njuna medsebojna podobnost
 (oziroma razlika) je vsakič med najvišjimi (oziroma najnižjimi) v celotni
-matriki, primerljivo z družino DE. Kar je še bolj zanimivo, je to, da se na
-videz nepovezana algoritma, OriginalAEO in OriginalMRFO, prav tako združita v vseh treh clustermapih. To nakazuje na precejšnjo
+mat\-ri\-ki, primerljivo z družino DE. Kar je še bolj zanimivo, je to, da se na
+videz nepovezana algoritma, OriginalAEO in OriginalMRFO, prav tako združita v vseh treh diagramih gruč. To nakazuje na precejšnjo
 vedenjsko podobnost med njima, ki je iz samih imen ali izvora algoritmov ne
 bi pričakovali.
 
@@ -1845,16 +1859,16 @@ globalno strukturo $F_{23}$ ter povprečje čez vse obravnavane probleme
     \centering
     \includegraphics[width=\textwidth]{Slike/Diploma_slike/dodana_vrednost_mer_dim2.pdf}
     \caption{Vrednosti šestih mer za štiri pare algoritmov, dimenzija 2.
-    Vrednosti so percentilni rangi znotraj posameznega problema, izračunani
+    Vred\-no\-sti so percentilni rangi znotraj posameznega problema, izračunani
     čez vseh $\binom{28}{2} = 378$ parov. Celica torej pove, kje je par
-    glede na razpon vseh parov na tem problemu. To je storjeno zaradi potencialno neomejenih vrednosti razlike v lokaciji in fitnesu. Oznaki \emph{visoka} in
+    glede na razpon vseh parov na tem problemu. To je storjeno zaradi potencialno neomejenih vrednosti razlike v lokaciji in fitnessu. Oznaki \emph{visoka} in
     \emph{nizka} podobnost sta relativni glede na obravnavani nabor.}
     \label{fig:dodana-vrednost}
 \end{figure}
 
 Pri paru JADE in OriginalSHADE kosinusna razdalja na problemu $F_{23}$ znaša
 $0{,}04$, torej sta si po njej med najbolj podobnimi pari v naboru, razlika v
-končnem fitnessu pa hkrati $0{,}58$. Podobno velja za par OriginalSHADE in
+končnem fitnessu pa je hkrati $0{,}58$. Podobno velja za par OriginalSHADE in
 SADE, kjer kosinusna razdalja znaša $0{,}05$, razlika v končnem fitnessu $0{,}56$ in
 razlika v končni lokaciji $0{,}47$. Vzorec se ohrani tudi v povprečju čez vse
 probleme, kjer je pri obeh parih kosinusna razdalja $0{,}05$, razliki v
@@ -1884,7 +1898,7 @@ središčem v $(0{,}26, -1{,}16)$. OriginalALO to doseže v šesti,
 AugmentedAEO pa v enajsti iteraciji. Ker zasedata isto regijo, so nizke tudi
 vse preostale mere. 
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{Slike/Diploma_slike/clustering_latest_F1_I1_AugmentedAEO+OriginalALO_run_1_dim_2.pdf}
     \caption{Zasedenost gruč skozi iteracije za algoritma AugmentedAEO in
@@ -1899,10 +1913,10 @@ v $(0{,}09, -2{,}71)$. Prav zato kosinusna razdalja doseže $0{,}97$, razlika v 
 lokaciji pa $0{,}88$. Razlika v končnem fitnessu je hkrati le $0{,}30$, kar
 je značilno za multimodalne krajine. Algoritma najdeta različna bazena
 primerljive kakovosti. Razliki v entropiji ($0{,}46$) in raziskovanju
-($0{,}43$) sta zmerni, saj OriginalALO populacijo zbere popolnoma, medtem ko
+($0{,}43$) sta zmerni, saj Orig\-i\-nal\-ALO populacijo zbere popolnoma, medtem ko
 AugmentedAEO ohrani nekaj agentov razpršenih po preostalih gručah.
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{Slike/Diploma_slike/clustering_latest_F23_I1_AugmentedAEO+OriginalALO_run_1_dim_2.pdf}
     \caption{Zasedenost gruč skozi iteracije za algoritma AugmentedAEO in
@@ -1941,13 +1955,13 @@ veljajo za obravnavani nabor 28 algoritmov in jih ne posplošujemo na
 metahevristike nasploh. Služijo naj kot ilustracija uporabe mer in primerjav algoritmov.
 
 Časovno togost kosinusnih mer bi lahko odpravili z dinamičnim časovnim
-prilagajanjem (angl. dynamic time warping - DTW), neobčutljivost na magnitudo z uteženo različico, vrstni red
+prilagajanjem (angl.~dynamic time warping -- DTW), neobčutljivost na mag\-ni\-tu\-do z uteženo različico, vrstni red
 obiskovanja gruč pa z Markovskimi prehodnimi matrikami, nabor sam pa
 preizkusili na več algoritmih in v višjih dimenzijah.
 
 
-\newpage
-\ \\
+%\newpage
+%\ \\
 \clearpage
 \addcontentsline{toc}{chapter}{Literatura}
 \bibliographystyle{plain}
