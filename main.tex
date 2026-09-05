@@ -122,8 +122,8 @@
     {\vskip 3em \textsc{DIPLOMSKO DELO\\[5mm]
     INTERDISCIPLINARNI UNIVERZITETNI\\ ŠTUDIJSKI PROGRAM PRVE STOPNJE\\ RAČUNALNIŠTVO IN MATEMATIKA}\par}%
     \vfill\null%
-    {\large \textsc{Mentor}: doc.\ dr.  Janoš Vidali\par}%
-
+    {\large \textsc{Mentor}: doc.\ dr.\ Janoš Vidali\par}%
+    {\vskip 0.5em \large \textsc{Somentorica}: dr.\ Gjorgjina Cenikj\par}%
     {\vskip 2em \large Ljubljana, 2026 \par}%
 \end{center}
 
@@ -180,9 +180,9 @@ Zahvalil bi se rad svoji družini za podporo in potrpežljivost skozi študij. P
 \chapter*{Seznam uporabljenih kratic}
 
 \noindent\begin{tabular}{p{0.1\textwidth}|p{.4\textwidth}|p{.4\textwidth}}
-  {\bf kratica} & {\bf angleško}                             & {\bf slovensko} \\ \hline
+  {\bf kratica} & {\bf angleško}                        & {\bf slovensko} \\ \hline
   {BBOB} & {Black-box optimization benchmarking} & {Vrednotenje optimizacije črne škatle} \\ \hline
-  {MHA} & {Metaheuristic algorithm} & {Metahevristični algoritem}
+  {WCSS} & {Within-cluster sum of squares}       & {Vsota kvadratov razdalj znotraj gruče}
 \end{tabular}
 \clearemptydoublepage
 
@@ -203,7 +203,7 @@ rešitve, ki jo dosežejo, kar pa ne pove ničesar o tem, kako so do nje prišli
 V tem delu predstavimo nabor šestih komplementarnih mer podobnosti, ki
 vedenje dveh algoritmov primerjajo neposredno iz njunih iskalnih trajektorij.
 Pet mer je izvirnih, kosinusno razdaljo prevzamemo iz predhodnega dela. Mere
-ovrednotimo na 28 algoritmih knjižnice mealpy, pognanih na primerjalnem
+ovrednotimo na 28 algoritmih knjižnice \emph{mealpy}, pognanih na primerjalnem
 naboru BBOB v dimenzijah 2, 5 in 10. Spearmanova korelacija pokaže, da so
 mere med seboj večinoma šibko povezane, zato vsaka prispeva svoj vidik
 vedenja. Pokažemo tudi, da se z naraščajočo dimenzijo iskalno vedenje
@@ -254,7 +254,7 @@ analitični obliki in jo lahko le vrednotimo v posameznih točkah, so v praksi
 pogosti. Za njihovo reševanje so se uveljavile \emph{metahevristike}, splošne
 iterativne metode iskanja, ki s kombinacijo naključnosti in hevrističnih
 pravil iščejo kakovostne približne rešitve. Njihovo število hitro narašča;
-knjižnica mealpy~\cite{van2023mealpy} jih ponuja več kot dvesto.
+knjižnica \emph{mealpy}~\cite{van2023mealpy} jih ponuja več kot dvesto.
 
 Uspešnost teh metod praviloma primerjamo po kakovosti rešitve, ki jo
 algoritem doseže v danem proračunu vrednotenj. Tak način je preprost in
@@ -563,7 +563,7 @@ problem s šibko globalno strukturo.
 
 Za vsako funkcijo si oglejmo dva pogleda. Levi je \emph{ploskovni prikaz}, ki
 vred\-nost funkcije predstavi kot tridimenzionalno površino nad ravnino iskalnega
-prostora. Desni je \emph{toplotna karta normaliziranih rangov}, kjer barvo
+prostora. Desni je \emph{toplotna slika normaliziranih rangov}, kjer barvo
 določa rang\footnote{Rang nam pove, na katerem mestu je vrednost funkcije po velikosti med vsemi točkami mreže; dodatno je normaliziran na interval [0,1].} vrednosti funkcije in ne njena absolutna vrednost. Slednji prikaz
 je pomemben, ker vrednosti funkcij BBOB obsegajo več velikostnih redov. Če bi
 barvali po surovih vrednostih, bi se struktura krajine izgubila, saj bi nekaj
@@ -589,7 +589,7 @@ minimumov.
     \begin{subfigure}[b]{0.38\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Slike/Diploma_slike/bbob_f001_i01_d02_heatmap-rank.png}
-        \caption{Toplotna karta rangov $f_1$}
+        \caption{Toplotna slika rangov $f_1$}
         \label{fig:f1-rank}
     \end{subfigure}
 
@@ -605,13 +605,13 @@ minimumov.
     \begin{subfigure}[b]{0.38\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Slike/Diploma_slike/bbob_f021_i01_d02_heatmap-rank.png}
-        \caption{Toplotna karta rangov $f_{21}$}
+        \caption{Toplotna slika rangov $f_{21}$}
         \label{fig:f21-rank}
     \end{subfigure}
 
     \caption{Krajini funkcije sfere ($f_1$, zgoraj) in Gallagherjeve funkcije
     s 101 vrhom ($f_{21}$, spodaj) v dimenziji 2, prikazani kot ploskev (levo)
-    in kot toplotna karta normaliziranih rangov (desno). Kontrast ponazarja
+    in kot toplotna slika normaliziranih rangov (desno). Kontrast ponazarja
     razpon težavnosti nabora BBOB, od preproste unimodalne kotanje do močno
     multimodalne krajine s šibko globalno strukturo. Vir slik: okolje
     COCO~\cite{bbob2019}.}
@@ -662,8 +662,8 @@ tega poglavja.
 }
 \caption{Pregled postopka zajema in priprave podatkov: od izvajanja
 algoritmov, prek zajema trajektorij, do gručenja in končne predstavitve v
-obliki porazdelitve zasedenosti gruč. Zagone izvedemo s knjižnicama mealpy
-in cocoex (razdelek~\ref{sec:mc}). Dobljena predstavitev je izhodišče tako
+obliki porazdelitve zasedenosti gruč. Zagone izvedemo s knjižnicama \emph{mealpy}
+in \emph{cocoex} (razdelek~\ref{sec:mc}). Dobljena predstavitev je izhodišče tako
 za ponazoritvene vizualizacije kot za mere podobnosti, obravnavane v
 poglavju~\ref{ch:metrike}.}
 \label{fig:pipeline}
@@ -704,7 +704,7 @@ njihovo analizo podrobneje predstavimo v poglavju~\ref{ch:metrike},
 razmejitev med prevzetim in izvirnim pa povzema
 tabela~\ref{tab:pregled-mer}.
 
-\section{Orodji mealpy in cocoex}
+\section{Orodji \emph{mealpy} in \emph{cocoex}}
 \label{sec:mc}
 
 Za izvedbo optimizacijskih zagonov uporabimo dve odprtokodni knjižnici v
@@ -724,7 +724,7 @@ Izbrani nabor pokriva šest od skupin, opisanih v razdelku~\ref{sec:opt_meta}:
 predstavnika človeških, fizikalnih in matematičnih. Vseh 28 algoritmov skupaj
 z njihovimi polnimi imeni in pripadajočo skupino navaja
 tabela~\ref{tab:algoritmi}. V prvem stolpcu so imena zapisana tako, kot se
-pojavljajo v knjižnici mealpy, saj v tej obliki nastopajo tudi v legendah
+pojavljajo v knjižnici \emph{mealpy}, saj v tej obliki nastopajo tudi v legendah
 slik v poglavju~\ref{ch:rezultati}. Polna imena puščamo v angleščini, ker so
 metode pod njimi uveljavljene v literaturi.
 
@@ -768,7 +768,7 @@ metode pod njimi uveljavljene v literaturi.
 \end{tabular}
 \caption{28 metahevrističnih algoritmov, uporabljenih v tem delu, z njihovimi
 polnimi imeni in skupino glede na vir navdiha. Skupine ustrezajo razdelitvi
-knjižnice mealpy: rojni (\texttt{swarm\_based}), evolucijski
+knjižnice \emph{mealpy}: rojni (\texttt{swarm\_based}), evolucijski
 (\texttt{evolutionary\_based}), sistemski (\texttt{system\_based}), človeški
 (\texttt{human\_based}), fizikalni (\texttt{physics\_based}) in matematični
 (\texttt{math\_based}).}
@@ -798,7 +798,7 @@ kjer je $n$ dimenzija iskalnega prostora.
 \label{sec:trajektorije}
 
 Za vsako kombinacijo algoritma, funkcije, instance, dimenzije in naključnega
-semena poženemo zagon optimizacijskega algoritma s pomočjo knjižnice meal\-py in
+semena poženemo zagon optimizacijskega algoritma s pomočjo knjižnice \emph{meal\-py} in
 med njegovim potekom zajamemo tri vrste podatkov: \emph{populacijsko
 trajektorijo}, \emph{trajektorijo najboljše rešitve} in \emph{mero
 raznolikosti populacije}.
@@ -808,7 +808,7 @@ raznolikosti populacije}.
 Za razliko od pristopov, ki beležijo le najboljšo najdeno rešitev, v tem delu
 shranimo \emph{celotno populacijo} skozi vse iteracije zagona, saj mere
 podobnosti temeljijo na tem, kako se populacija kot celota giblje po iskalnem
-prostoru. Knjižnica mealpy med reševanjem v atributu
+prostoru. Knjižnica \emph{mealpy} med reševanjem v atributu
 \texttt{model.history.list\_po\-pu\-la\-tion} beleži pozicije vseh agentov v vsaki
 iteraciji. Za vsakega agenta v vsaki iteraciji shranimo njegov položaj
 $x \in \mathbb{R}^n$, vrednost kriterijske funkcije $f(x)$, zaporedno številko
@@ -816,9 +816,9 @@ iteracije ter kumulativno število dotedanjih vrednotenj kriterijske funkcije.
 
 \subsection{Trajektorija najboljše rešitve}
 
-Poleg celotne populacije shranimo tudi \emph{trajektorijo najboljše rešitve}
-, torej zaporedje najboljših doslej najdenih rešitev skozi
-iteracije, ki ga mealpy beleži v atributu
+Poleg celotne populacije shranimo tudi \emph{trajektorijo najboljše rešitve}, 
+torej zaporedje najboljših doslej najdenih rešitev skozi
+iteracije, ki ga \emph{mealpy} beleži v atributu
 \texttt{model.history.list\_global\_best}. Ta trajektorija je za razliko od
 populacijske trajektorije monotono nepadajoča v kakovosti rešitve in
 predstavlja pot, po kateri se je premikala trenutno najboljša znana rešitev.
@@ -829,7 +829,7 @@ poglavju~\ref{ch:metrike} uporabimo za izračun mer podobnosti končnih rešitev
 
 \subsection{Raznolikost populacije}
 
-Za vsako iteracijo zagona mealpy izračuna tudi mero \emph{raznolikosti}
+Za vsako iteracijo zagona \emph{mealpy} izračuna tudi mero \emph{raznolikosti}
 populacije, iz katere izpelje deleža \emph{raziskovanja} (angl.\ exploration)
 in \emph{izkoriščanja} (angl.\ exploitation) v odstotkih, ki se v vsaki
 iteraciji seštejeta v 100 \%. Raznolikost temelji na povprečnem odstopanju
@@ -933,7 +933,7 @@ v poglavju~\ref{ch:metrike}.
 Za vsak problem shranimo tri datoteke: koordinate centrov gruč, celoten
 označen nabor podatkov (položaji agentov skupaj s pripadajočo oznako gruče)
 ter tabelo porazdelitve zasedenosti gruč, ki je vhod za nadaljnjo analizo.
-Eden izmed možnih načinov vizualizacije trajektorije potem izhaja direktno iz gručenja. V vsaki iteraciji se 50 agentov porazporedi v $k$ gruč (odvisno od problema), kar nam v kombinaciji z uporabo toplotne karte\footnote{Vizualizacija je iz knjižnice Seaborn.} da spodnjo sliko~\ref{fig:zasedenost-primer}.
+Eden izmed možnih načinov vizualizacije trajektorije potem izhaja direktno iz gručenja. V vsaki iteraciji se 50 agentov razporedi v $k$ gruč (odvisno od problema), kar nam v kombinaciji z uporabo toplotne karte\footnote{Vizualizacija je iz knjižnice \emph{Seaborn}.} da spodnjo sliko~\ref{fig:zasedenost-primer}.
 
 \begin{figure}[p]
 \centering
@@ -955,11 +955,11 @@ vsaka mera vrne eno samo številsko vrednost, ki je tem manjša, čim bolj
 podobno sta se algoritma vedla. Mera entropije, obe kosinusni meri in mera
 razlike v raziskovanju in izkoriščanju zavzemajo vrednosti na intervalu
 $[0,1]$ (pri zadnji to dosežemo z delitvijo s 100, glej
-razdelek~\ref{sec:exploration}), meri razlike v končni lokaciji in v končnem
-fitnessu pa sta neomejeni.
+razdelek~\ref{sec:exploration}), meri razlike v končni lokaciji in v končni
+kakovosti pa sta neomejeni.
 
 Glede na Definicijo~\ref{def:metrika} velja pripomniti dvoje. Prvič, štiri od šestih mer (entropija, razlika v raziskovanju in izkoriščanju, razlika v
-končni lokaciji in razlika v končnem fitnessu) so metrike na prostoru
+končni lokaciji in razlika v končni kakovosti) so metrike na prostoru
 \emph{predstavitev}, na katerih so definirane. Prvi dve sta, do
 konstantnega faktorja $1/T$ natančno, razdalji $L^1$ med krivuljama v
 $\mathbb{R}^T$, tretja je evklidska razdalja med točkama v $\mathbb{R}^n$,
@@ -977,7 +977,7 @@ dela~\cite{clustopt2025}, predstavljenega v razdelku~\ref{sec:sorodna}, in
 skupaj s postopkom gručenja iz razdelka~\ref{sec:grucenje} tvori izhodišče,
 na katerem gradimo. Preostalih pet mer (entropija zasedenosti gruč,
 kosinusna razdalja po gručah, razlika v raziskovanju in izkoriščanju, razlika
-v končni lokaciji in razlika v končnem fitnessu) je prispevek tega dela.
+v končni lokaciji in razlika v končni kakovosti) je prispevek tega dela.
 Razmejitev skupaj z ostalimi lastnostmi mer povzema
 tabela~\ref{tab:pregled-mer} na koncu poglavja.
 
@@ -1288,10 +1288,10 @@ populacije.
 
 \subsection{Formalna definicija}
  
-Za dani algoritem in zagon nam knjižnica mealpy za vsako iteracijo $t$ poda
+Za dani algoritem in zagon nam knjižnica \emph{mealpy} za vsako iteracijo $t$ poda
 delež \emph{raziskovanja} $e(t) \in [0, 100]$, ki odraža razpršenost
 populacije v tisti iteraciji glede na razpršenost, doseženo  kadarkoli med
-zagonom. To vrednost mealpy izračuna interno. Delež
+zagonom. To vrednost \emph{mealpy} izračuna interno. Delež
 \emph{izkoriščanja} je $100 - e(t)$. Ker se deleža na vsaki
 iteraciji seštejeta v 100, en sam par vrednosti ($e(t)$ za oba algoritma) v
 celoti opiše razmerje med raziskovanjem in izkoriščanjem. Ločene mere za
@@ -1327,7 +1327,7 @@ končni najboljši rešitvi dveh algoritmov.
 \subsection{Formalna definicija}
 
 Naj bosta $x^{*}_A, x^{*}_B \in \mathbb{R}^n$ končni najboljši rešitvi
-(položaja $g\_best$) algoritmov $A$ in $B$ na istem zagonu. Mera razlike v
+(položaja \texttt{g\_best}) algoritmov $A$ in $B$ na istem zagonu. Mera razlike v
 končni lokaciji je evklidska razdalja med njima:
 \[
     d_{\text{loc}}(A, B) = \lVert x^{*}_A - x^{*}_B \rVert_2
@@ -1342,7 +1342,7 @@ različnimi instancami ne bi bila smiselna, ker gre za različno premaknjene in 
 primerljiva med dimenzijami, saj z večanjem $n$ narašča tudi razpon možnih
 evklidskih razdalj znotraj iskalnega prostora $[-5,5]^n$.
 
-\section{Razlika v končnem fitnessu}
+\section{Razlika v končni kakovosti rešitve}
 \label{sec:fitness}
 
 Ta mera meri razliko v doseženi kakovosti rešitve dveh algoritmov, torej
@@ -1352,7 +1352,7 @@ razliko v vrednosti kriterijske funkcije njunih končnih najboljših rešitev.
 
 Naj bosta $y^{*}_A = f(x^{*}_A)$ in $y^{*}_B = f(x^{*}_B)$ končni vrednosti
 kriterijske funkcije, ki ju dosežeta algoritma $A$ in $B$ na istem zagonu.
-Mera razlike v končnem fitnessu je
+Mera razlike v končni kakovosti rešitve je
 \[
     d_{\text{fit}}(A, B) = \left| y^{*}_A - y^{*}_B \right|.
 \]
@@ -1388,9 +1388,9 @@ tabelo ne vključujemo, saj gre za podobnosti in ne za razdalje.
 Entropija zasedenosti gruč    & $d_H$              & gručenje       & $[0,1]$      & da$^{*}$ & izvirna \\
 Kosinusna razdalja            & $d_{\cos}$         & gručenje       & $[0,1]$      & ne       & prevzeta~\cite{clustopt2025} \\
 Kosinusna razdalja po gručah  & $d_{\mathrm{col}}$ & gručenje       & $[0,1]$      & ne       & izvirna \\
-Razlika v raziskovanju        & $d_e$              & mealpy         & $[0,1]$      & da$^{*}$ & izvirna \\
+Razlika v raziskovanju        & $d_e$              & \emph{mealpy}         & $[0,1]$      & da$^{*}$ & izvirna \\
 Razlika v končni lokaciji     & $d_{\mathrm{loc}}$ & končne rešitve & $[0,\infty)$ & da$^{*}$ & izvirna \\
-Razlika v končnem fitnessu    & $d_{\mathrm{fit}}$ & končne rešitve & $[0,\infty)$ & da$^{*}$ & izvirna \\
+Razlika v končni kakovosti    & $d_{\mathrm{fit}}$ & končne rešitve & $[0,\infty)$ & da$^{*}$ & izvirna \\
 \bottomrule
 \end{tabular}
 \caption{Pregled šestih mer podobnosti, obravnavanih v tem poglavju.
@@ -1479,7 +1479,7 @@ $\rho = 0$ pa za odsotnost monotone povezanosti med $X$ in $Y$.
 Spearmanovo korelacijo namesto Pearsonove uporabimo iz dveh razlogov.
 Prvič, mere so med seboj na zelo različnih skalah. Štiri od njih
 (entropija, obe kosinusni meri in razlika v raziskovanju) so omejene na
-$[0,1]$, razliki v lokaciji in fitnessu pa sta neomejeni in se med
+$[0,1]$, razliki v lokaciji in kakovosti pa sta neomejeni in se med
 funkcijami razlikujeta za več velikostnih redov. Ker Spearmanova
 korelacija namesto surovih vrednosti uporablja range, je neobčutljiva na
 take razlike v skali. Drugič, zanima nas splošnejše vprašanje, ali dve meri
@@ -1520,7 +1520,7 @@ tra\-jek\-to\-rij (entropija, kosinusna razdalja in kosinusna razdalja po gruča
 med seboj korelirajo zmerno (na primer korelacija med globalno in po
 gručah kosinusno razdaljo znaša $\rho \approx 0{,}5$ v vseh treh dimenzijah), kar je pričakovano, saj izhajajo iz istega vira podatkov, a
 kljub temu niso redundantne. Mere, ki izhajajo iz drugih virov podatkov, so
-bolj neodvisne. Razlika v lokaciji in razlika v fitnessu korelirata močno
+bolj neodvisne. Razlika v lokaciji in razlika v kakovosti korelirata močno
 pri dimenziji 2 ($\rho = 0{,}69$), a ta povezava z dimenzijo hitro upade
 (razdelek~\ref{sec:dimenzije}). Izjema je par entropija in razlika v
 raziskovanju, ki kljub neodvisnemu izvoru izračuna korelira
@@ -1560,11 +1560,11 @@ zelo močno in z dimenzijo še narašča ($\rho = 0{,}77$ do $0{,}84$).
 
 
  
-\section{Lokacija in fitness čez dimenzije}
+\section{Lokacija in kakovost rešitve čez dimenzije}
 \label{sec:dimenzije}
 
 Mera razlike v lokaciji (razdelek~\ref{sec:location}) in mera razlike v
-fitnessu (razdelek~\ref{sec:fitness}) merita navidez ločena vidika. Prva
+kakovosti (razdelek~\ref{sec:fitness}) merita navidez ločena vidika. Prva
 pove, kako daleč narazen sta v iskalnem prostoru pristali končni rešitvi
 dveh algoritmov, druga pa, kako različno kakovostni sta ti rešitvi.
 Vprašanje, ki si ga zastavimo v tem razdelku, je, ali sta ta dva vidika med seboj povezana, in če, kako se ta povezava spreminja z naraščajočo
@@ -1573,15 +1573,15 @@ dimenzijo iskalnega prostora.
 V nizkodimenzionalnih, pogosto skoraj unimodalnih krajinah, je odgovor
 intuitiven. Če obstaja v bistvu en sam privlačni bazen, bližina končne
 lokacije optimumu neposredno določa kakovost dosežene rešitve, zato
-pričakujemo, da se mera razlike v lokaciji in mera razlike v fitnessu
+pričakujemo, da se mera razlike v lokaciji in mera razlike v kakovosti
 ujemata. Z naraščajočo dimenzijo pa krajine praviloma postanejo bolj
 multimodalne, kar algoritmoma omogoči, da dosežeta primerljivo kakovostni
-rešitvi (nizka razlika v fitnessu), čeprav sta pristala v povsem različnih,
+rešitvi (nizka razlika v kakovosti), čeprav sta pristala v povsem različnih,
 oddaljenih bazenih (visoka razlika v lokaciji). Vedenje se tako razklopi
 od izida.
 
 To hipotezo potrdi Spearmanova korelacija med merama razlike v lokaciji in
-razlike v fitnessu (glej razdelek~\ref{sec:spearman}), ki z naraščajočo
+razlike v kakovosti (glej razdelek~\ref{sec:spearman}), ki z naraščajočo
 dimenzijo dosledno upada in znaša $\rho = 0{,}69$ pri dimenziji 2, $\rho = 0{,}33$
 pri dimenziji 5 in $\rho = 0{,}18$ pri dimenziji 10. Upad je monoton in izrazit, od močne povezanosti pri dimenziji 2 do zanemarljive pri dimenziji 10, kar je skladno s tem, da krajine z naraščajočo dimenzijo
 iskalnega prostora postajajo vse bolj zapletene.
@@ -1597,7 +1597,7 @@ ločeno po dimenziji, skupaj z regresijsko premico.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Slike/Diploma_slike/lokacija_fitness_scatter_F21_I1.pdf}
-    \caption{Razlika v lokaciji proti razliki v fitnessu za vse pare. Spearmanova
+    \caption{Razlika v lokaciji proti razliki v kakovosti za vse pare. Spearmanova
     korelacija na tem problemu ($\rho = 0{,}94$ pri dimenziji 2,
     $\rho = 0{,}53$ pri dimenziji 5, $\rho = 0{,}34$ pri dimenziji 10) sledi
     istemu padajočemu trendu kot agregatna korelacija čez vse obravnavane
@@ -1614,7 +1614,7 @@ Entropija zasedenosti gruč (razdelek~\ref{sec:entropy}) in razlika v
 raziskovanju/izkoriščanju (razdelek~\ref{sec:exploration}) izhajata iz
 \emph{popolnoma neodvisnih} virov podatkov. Prva izhaja iz gručenja populacijskih
 trajektorij, druga iz notranje mere razpršenosti, ki jo med reševanjem
-neodvisno beleži knjižnica mealpy. Kljub temu obe intuitivno merita isto osnovno lastnost, razpršenost populacije po iskalnem prostoru skozi čas, le prek povsem različnih poti izračuna.
+neodvisno beleži knjižnica \emph{mealpy}. Kljub temu obe intuitivno merita isto osnovno lastnost, razpršenost populacije po iskalnem prostoru skozi čas, le prek povsem različnih poti izračuna.
 
 Če se meri kljub neodvisnima izvoroma ujemata, to ni posledica skupnega
 vira podatkov (ker ga ni), temveč dokaz, da obe dejansko merita to, kar trdita, t.\,i.\ \emph{konvergentna veljavnost}. Spearmanova korelacija
@@ -1622,7 +1622,7 @@ med tema dvema merama (glej razdelek~\ref{sec:spearman}) je visoka skozi
 vse tri dimenzije in z dimenzijo celo rahlo narašča in znaša $\rho = 0{,}77$ pri
 dimenziji 2, $\rho = 0{,}83$ pri dimenziji 5 in $\rho = 0{,}84$ pri
 dimenziji 10. Gre za natanko nasproten vzorec od tistega, ki smo ga opazili
-med lokacijo in fitnessom v razdelku~\ref{sec:dimenzije}. Medtem ko se tam
+med lokacijo in kakovostjo v razdelku~\ref{sec:dimenzije}. Medtem ko se tam
 povezava z naraščajočo dimenzijo razklopi, tu ostane trdno prisotna in se
 še okrepi.
 
@@ -1667,27 +1667,27 @@ tiste, ki ostanejo razpršeni skozi ves zagon.
 \section{Entropija skozi probleme in dimenzije}
 \label{sec:entropija-fitness}
 
-\subsection{Entropija in fitness na enem problemu}
+\subsection{Entropija in kakovost rešitve na enem problemu}
 
 Dimenzijski razklop iz razdelka~\ref{sec:dimenzije} si oglejmo še na ravni
 posameznih algoritmov, na istem problemu ($\prob{21}{1}$) v dimenzijah 2 in 10.
 Slika~\ref{fig:entropija-fitness-f21} prikazuje normalizirano entropijo
-skozi iteracije za osem algoritmov, z legendo, urejeno po končnem
-fitnessu (najboljši prvi), ki poleg fitnessa navaja tudi razliko do
+skozi iteracije za osem algoritmov, z legendo, urejeno po končni kakovosti 
+(najboljši prvi), ki navaja tudi razliko do
 pravega optimuma $\Delta$, evklidsko razdaljo do optimuma $d$ in končno
 entropijo $H_{\text{konec}}$.
 
-Pri dimenziji 2 (slika~\ref{fig:entropija-fitness-f21}a) je fitness med
-vsemi osmimi algoritmi skoraj identičen ($40{,}8$--$41{,}1$, $\Delta$ med
+Pri dimenziji 2 (slika~\ref{fig:entropija-fitness-f21}a) je kakovost med
+vsemi osmimi algoritmi skoraj identična ($40{,}8$--$41{,}1$, $\Delta$ med
 $2{,}5 \cdot 10^{-9}$ in $0{,}32$), kljub temu da se končna entropija giblje
 od popolnega kolapsa ($H_{\text{konec}} = 0{,}00$ pri OriginalDE,
 AugmentedAEO, OriginalALO in OriginalGWO) do skoraj nespremenjene
 razpršenosti ($H_{\text{konec}} = 0{,}72$ pri OriginalSHADE). Celo razdalja
-do pravega optimuma se giblje od $0{,}00$ do $2{,}61$, fitness pa ostane praktično raven, nazoren primer razklopa vedenja od izida, ki smo ga
+do pravega optimuma se giblje od $0{,}00$ do $2{,}61$, kakovost pa ostane praktično ravna, nazoren primer razklopa vedenja od izida, ki smo ga
 kvantitativno pokazali v razdelku~\ref{sec:dimenzije}.
 
 Pri dimenziji 10 (slika~\ref{fig:entropija-fitness-f21}b) je slika
-drugačna. Fitness se med algoritmi opazno razlikuje ($42{,}4$--$51{,}0$,
+drugačna. Kakovost se med algoritmi opazno razlikuje ($42{,}4$--$51{,}0$,
 $\Delta$ med $1{,}6$ in $10{,}0$, torej za red velikosti večji razpon kot
 pri dimenziji 2). Zanimivo pa je, da je kar šest od osmih algoritmov
 doseglo popoln kolaps entropije ($H_{\text{konec}} = 0{,}00$), a kljub temu
@@ -1695,7 +1695,7 @@ dosegajo zelo različno kakovostne rešitve. To pomeni, da sam kolaps
 entropije ne napove kakovosti dosežene rešitve. Odločilno je, kam
 je populacija konvergirala, ne le, ali je. Omembe vredno je tudi, da sta
 edina algoritma, ki nista popolnoma konvergirala
-($H_{\text{konec}} \approx 0{,}2$ pri OriginalSHADE in SADE), hkrati tudi najboljša po fitnessu. Na tako majhnem vzorcu tega sicer ne moremo
+($H_{\text{konec}} \approx 0{,}2$ pri OriginalSHADE in SADE), hkrati tudi najboljša po kakovosti. Na tako majhnem vzorcu tega sicer ne moremo
 posplošiti v splošno pravilo, je pa skladno z ugotovitvijo iz
 razdelka~\ref{sec:konvergenca}, da je ohranjanje raziskovanja povezano z
 razpršenostjo populacije skozi celoten zagon.
@@ -1719,7 +1719,7 @@ razpršenostjo populacije skozi celoten zagon.
     \end{subfigure}
     \caption{Normalizirana entropija skozi iteracije na problemu $\prob{21}{1}$, v
     dimenziji 2 (zgoraj) in dimenziji 10 (spodaj). Legenda je urejena po
-    končnem fitnessu (padajoče) in navaja fitness, razliko do
+    končni kakovosti (padajoče) in navaja kakovost, razliko do
     optimuma $\Delta$, evklidsko razdaljo do optimuma $d$ ter končno
     entropijo $H_{\text{konec}}$.}
     \label{fig:entropija-fitness-f21}
@@ -1797,7 +1797,7 @@ jasno ločene skupine. OriginalSHADE in SADE nikoli zares ne konvergirata,
 saj entropija ostane visoka skozi ves zagon. Orig\-i\-nal\-ALO, AugmentedAEO,
 OriginalAEO in OriginalMRFO hitro in popolnoma konvergirajo. OriginalDE,
 GWO\_WOA in OriginalGWO prav tako hitro padejo, a se ustalijo na zmerni,
-neničelni ravni. Razlog, zakaj se \emph{OriginalDE} obnaša drugače kot \emph{OriginalSHADE} in \emph{SADE}, čeprav so vsi iz družine DE, je to, da \emph{OriginalDE} nima nobenega mehanizma prilagajanja entropije populacije, medtem ko sta druga dva algoritma \sn{self-adapting} različici, torej se s težavnostjo problema entropija njune populacije spreminja.
+neničelni ravni. Razlog, zakaj se \emph{OriginalDE} obnaša drugače kot \emph{OriginalSHADE} in \emph{SADE}, čeprav so vsi iz družine DE, je to, da \emph{OriginalDE} nima nobenega mehanizma prilagajanja entropije populacije, medtem ko sta druga dva algoritma \sn{samoprilagajajoči} različici, torej se s težavnostjo problema entropija njune populacije spreminja.
 
 \begin{figure}[ht]
     \centering
@@ -1861,18 +1861,18 @@ globalno strukturo $F_{23}$ ter povprečje čez vse obravnavane probleme
     \caption{Vrednosti šestih mer za štiri pare algoritmov, dimenzija 2.
     Vred\-no\-sti so percentilni rangi znotraj posameznega problema, izračunani
     čez vseh $\binom{28}{2} = 378$ parov. Celica torej pove, kje je par
-    glede na razpon vseh parov na tem problemu. To je storjeno zaradi potencialno neomejenih vrednosti razlike v lokaciji in fitnessu. Oznaki \emph{visoka} in
+    glede na razpon vseh parov na tem problemu. To je storjeno zaradi potencialno neomejenih vrednosti razlike v lokaciji in kakovosti. Oznaki \emph{visoka} in
     \emph{nizka} podobnost sta relativni glede na obravnavani nabor.}
     \label{fig:dodana-vrednost}
 \end{figure}
 
 Pri paru JADE in OriginalSHADE kosinusna razdalja na problemu $F_{23}$ znaša
 $0{,}04$, torej sta si po njej med najbolj podobnimi pari v naboru, razlika v
-končnem fitnessu pa je hkrati $0{,}58$. Podobno velja za par OriginalSHADE in
-SADE, kjer kosinusna razdalja znaša $0{,}05$, razlika v končnem fitnessu $0{,}56$ in
+končni kakovosti pa je hkrati $0{,}58$. Podobno velja za par OriginalSHADE in
+SADE, kjer kosinusna razdalja znaša $0{,}05$, razlika v končni kakovosti $0{,}56$ in
 razlika v končni lokaciji $0{,}47$. Vzorec se ohrani tudi v povprečju čez vse
 probleme, kjer je pri obeh parih kosinusna razdalja $0{,}05$, razliki v
-lokaciji in fitnessu pa okoli $0{,}24$. Podobna trajektorija skozi gruče
+lokaciji in kakovosti pa okoli $0{,}24$. Podobna trajektorija skozi gruče
 torej ne pomeni \emph{nujno} niti primerljivo dobre rešitve niti
 primerljivega mesta v iskalnem prostoru.
 
@@ -1910,7 +1910,7 @@ vse preostale mere.
 Na funkciji $F_{23}$ je slika povsem drugačna. AugmentedAEO se usmeri v
 gručo s središčem v $(-0{,}36, 4{,}60)$, OriginalALO pa v gručo s središčem
 v $(0{,}09, -2{,}71)$. Prav zato kosinusna razdalja doseže $0{,}97$, razlika v končni
-lokaciji pa $0{,}88$. Razlika v končnem fitnessu je hkrati le $0{,}30$, kar
+lokaciji pa $0{,}88$. Razlika v končni kakovosti je hkrati le $0{,}30$, kar
 je značilno za multimodalne krajine. Algoritma najdeta različna bazena
 primerljive kakovosti. Razliki v entropiji ($0{,}46$) in raziskovanju
 ($0{,}43$) sta zmerni, saj Orig\-i\-nal\-ALO populacijo zbere popolnoma, medtem ko
@@ -1942,7 +1942,7 @@ podvajajo, saj tudi tiste iz istega vira korelirajo le zmerno
 razlika v raziskovanju, izhaja iz neodvisnih virov in ga zato beremo kot
 konvergentno veljavnost
 (razdelek~\ref{sec:konvergenca}). Povezava med razliko v lokaciji in
-razliko v fitnessu z naraščajočo dimenzijo slabi, kar podpira
+razliko v kakovosti z naraščajočo dimenzijo slabi, kar podpira
 izhodiščno tezo, da končni rezultat sam ne opiše iskalnega vedenja
 (razdelek~\ref{sec:dimenzije}). Isto se na ravni posameznih algoritmov
 pokaže na problemu $F_{21}$ (razdelek~\ref{sec:entropija-fitness}). Mere
